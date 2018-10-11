@@ -1,0 +1,11 @@
+class MovieQuoteInfo {
+    public static void main(String[] args) {
+        // Write your code here
+        String movieQuote = "'I am Steve Rogers,'";
+        String movieName = "Avengers:Infinity War";
+        String movieActor = "Steve Rogers";
+        String movieRelease = "2018";
+        
+        System.out.println("My favorite movie quote was when " + movieActor + " said " + movieQuote + " from " + movieName + " which came out in " + movieRelease + ".");
+    }
+}
