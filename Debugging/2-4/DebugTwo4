@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class DebugTwo4
+{
+   public static void main(String[] args)
+   {
+      String costString;
+      Double cost;
+      final Double tax = 0.06;
+      Scanner input = new Scanner(System.in);
+      System.out.println("Enter price of item you are buying");
+      costString = input.nextLine();
+      cost = Double.parseDouble(costString);
+      System.out.println("With " + tax * 100 + "% tax,  purchase  is $" + (cost + cost * tax));
+   }
+}
