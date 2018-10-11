@@ -1,0 +1,29 @@
+import java.util.*;
+public class CountSpaces2
+{
+
+  public static void main(String[] args)
+  {
+      String inString;
+      Scanner in = new Scanner(System.in);
+      System.out.print("Please enter a movie quote >> ");
+      inString = in.nextLine();      
+      int spaces = calculateSpaces(inString);
+      System.out.println("The number of spaces is " + spaces); 
+      
+  }
+    public static int calculateSpaces(String inString)
+      {
+        int res = 0;
+        for(int i=0;i<inString.length(); i++)
+          {
+              char ch = inString.charAt(i);
+              if(ch == ' ')
+                  res++;
+          }
+        return res;
+      }
+    
+}
+
+  
