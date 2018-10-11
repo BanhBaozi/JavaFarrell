@@ -1,0 +1,13 @@
+class SongLyrics {
+    public static void main(String[] args) {
+        // Write your code here
+        String FirstLine = "Is this real life?";
+        String SecondLine = "Our is this just fantasy?";
+        String ThirdLine = "Caught in a landslide.";
+        String FourthLine = "No escape from reality.";
+        System.out.println(FirstLine);
+        System.out.println(SecondLine);
+        System.out.println(ThirdLine);
+        System.out.println(FourthLine);
+    }
+}
