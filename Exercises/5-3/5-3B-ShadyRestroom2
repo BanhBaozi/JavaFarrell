@@ -1,0 +1,75 @@
+import java.util.Scanner;
+public class ShadyRestRoom2
+{
+   // Modify the code below
+   public static void main (String args[])
+   {
+      int selection;
+      int price;
+      String result;
+      int QUEEN = 1, KING = 2, SUITE = 3;
+      int QPRICE = 125, KPRICE = 139,
+         SPRICE = 165;
+      String QSTRING = "Queen bed", KSTRING = "King bed",
+         SSTRING = "Suite with a king bed and pull-out couch",
+         INVALIDSTRING = "an invalid option";
+       final String LAKEVIEW_STR = "Lake view",
+                   PARKVIEW_STR = "Park View";
+       final int LAKEVIEW = 1, PARKVIEW = 2;
+       final int LAKEVIEW_PR = 15;
+       Scanner in = new Scanner(System.in);
+       System.out.println("\t\n\nMenu\n");
+       System.out.println("(" + QUEEN + ") " + QSTRING);
+       System.out.println("(" + KING + ") " + KSTRING);
+       System.out.println("(" + SUITE + ") " + SSTRING);
+       System.out.print("Enter Selection (1, 2, or 3) >> ");
+       selection = in.nextInt();
+       if(selection == QUEEN)
+       {
+         result = QSTRING;
+         price = QPRICE;
+       }
+       else
+           if(selection == KING)
+           {
+               result = KSTRING;
+               price = KPRICE;
+           }
+       else
+           if (selection == SUITE)
+           {
+               result = SSTRING;
+               price = SPRICE;
+           }
+       else
+       {
+           result = INVALIDSTRING;
+           price = 0;
+       }
+       if(price != 0)
+       {
+           System.out.println("\t\n\nMenu\n");
+           System.out.println("(" + LAKEVIEW + ") " + LAKEVIEW_STR);
+           System.out.println("(" + PARKVIEW + ") " + PARKVIEW_STR);
+           System.out.print("Enter Selection (1 or 2)>> ");
+           selection = in.nextInt();
+           if(selection == LAKEVIEW)
+           {
+               price = price + LAKEVIEW_PR;
+           }
+           else
+               if(selection == PARKVIEW)
+               {
+                  price = price + 0;
+               }
+           else
+               if(selection != PARKVIEW)
+               {
+                   price = price + LAKEVIEW_PR; 
+                   System.out.print("Selection is invalid - assuming lake view. ");
+               }
+            System.out.println("Final price is $" + price);
+                   
+       }
+   }
+}
