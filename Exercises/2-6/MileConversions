@@ -1,0 +1,16 @@
+class MileConversions {
+    public static void main(String[] args) {
+        // Write your code here
+        float miles = 4;
+        float INCHES_IN_FEET = 12;
+        float INCHES_IN_MILE = 63360;
+        float FEET_IN_MILE = 5280;
+        float YARDS_IN_MILE = 1760;
+
+        INCHES_IN_MILE = 63360 * miles;
+        FEET_IN_MILE = 5280 * miles;
+        YARDS_IN_MILE = 1760 * miles;
+        System.out.println(miles + " miles is " + INCHES_IN_MILE + " inches, or " + FEET_IN_MILE + " feet, or " + YARDS_IN_MILE + " yards");
+        
+    }
+}
