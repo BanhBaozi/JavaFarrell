@@ -1,0 +1,42 @@
+import java.util.*;
+public class StringSort2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String[] values = new String[15];
+        int x = 0;
+        int count = 0;
+        String word;
+        final String QUIT = "zzz";
+        boolean didUserQuit = false;
+        
+        for(x = 0; x < values.length; ++x)
+            values[x] = QUIT;
+        x = 0;
+        
+        while(x < values.length)
+        {
+            System.out.println("Please enter a word or 'zzz' to quit");
+            word = in.nextLine();
+            if(word.equals(QUIT))
+            {
+                count = x;
+                x = values.length;
+                didUserQuit = true;
+            }
+            else
+            {
+                values[x] = word;
+                ++x;
+            }
+            
+        }
+        if(!didUserQuit)
+            count = values.length;
+        String message = "Values:";
+        Arrays.sort(values);
+        for(x = 0; x < count; ++x)
+            message = message + " " + values[x];
+        System.out.println(message);
+    }
+}
+
