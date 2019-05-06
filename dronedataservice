@@ -1,0 +1,104 @@
+package com.dronerecon.ws;
+
+        import javax.servlet.*;
+        import javax.servlet.http.*;
+        import java.io.*;
+        import java.util.*;
+        import java.security.SecureRandom;
+
+/**
+ *
+ * @author Your Name Here :-)
+ */
+public class DroneDataService extends HttpServlet{
+
+
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("application/json;charset=utf-8");
+        response.addHeader("Access-Control-Allow-Origin", "*");
+
+        PrintWriter out = response.getWriter();
+
+        // ##############################
+        // 1. Get params passed in.
+
+        // Get the following parameters from the request object and put them into strings:
+        // area_id
+        // tilex
+        // tiley
+        // totalcols
+        // totalrows
+        // ##############################
+
+
+
+        // ##############################
+        // 2. Default value of beginning direction.
+
+        // Set a string called sDirection to "right".
+        // ##############################
+
+
+
+        // ##############################
+        // 3. Calculate next drone move.
+
+        // Determine next tile to move to.
+        // Base this on current x and y.
+        // Change sDirection if necessary.
+        // Drone must serpentine from top left of grid back and forth down.
+        // If rows are done, change sDirection to "stop".
+        // ##############################
+
+        // check if on even row
+        if(iTileY % 2 == 0){
+
+            // if current x is equal to total cols -1.
+                // increase current y by 1
+                // set direction to "left"
+            // else
+                // increase current x by 1
+                // can set direction to "right" if you don't default above.
+
+        }
+
+        // else it's on an odd row
+        else{
+
+            // if current x is 0.
+                // increase current y by 1
+                // can set direction to "right" if you don't default above.
+            // else
+                // Descease current x by 1.
+                // sets direction to "left"
+
+        }
+
+        // check if y is now beyond the total rows of grid so that the stop can be sent back
+        if(current y equal to total rows){
+            // set direction to "stop"
+        }
+
+
+
+        // ##############################
+        // 4. Format & Return JSON string to caller.
+
+        /* Return via out.println() a JSON string like this:
+        {"area_id":"[area id from above]", "nextTileX":"[next tile x]", "nextTileY":"[next tile y]", "direction":"[direction string from above]"}
+        */
+        // ##############################
+
+        String sReturnJson = ("{" +
+                "\"area_id\":\"" + sAreaid + "\"," +
+                "\"nextTileX\":\"" + iTileX + "\"," +
+                "\"nextTileY\":\"" + iTileY + "\"," +
+                "\"direction\":\"" + sDirection + "\"," +
+                "}");
+
+    }
+}
+
